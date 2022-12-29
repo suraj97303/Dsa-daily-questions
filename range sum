@@ -1,0 +1,46 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    int temp;
+    cin>>temp;
+       
+   
+    while(temp--){
+  long long int  a;
+   long long int b;
+    long long int sum =0;
+        long long int ans =0;
+
+    cin>>a>>b;
+    long long num1 = abs(a);
+        long long num2 = abs(b);
+      if(num1<num2) {
+while(num1<=num2){
+   
+sum+=num1;
+num1++;
+    
+         
+}  
+            cout<<sum<<endl; 
+      } 
+   else {     
+while(num1>=num2){
+    ans+= num1;
+    num1--;
+}
+       cout<<ans<<endl;
+   }
+        
+
+    }
+
+    return 0;
+}
