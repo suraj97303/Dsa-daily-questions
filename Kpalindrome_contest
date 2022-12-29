@@ -1,0 +1,56 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+bool check(string &s1, string &s2, string &s3){
+    if(s1==s2 && s1==s3){
+        return true;
+    }else
+    return false;
+}
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    
+    int t;
+    cin>>t;
+    while(t--){
+string s;
+        cin>>s;
+ 
+      
+        int n = s.size();
+        if(s.size()%3!=0){
+            cout<<"NO"<<endl;
+        }
+     else{
+         int i=0;
+         string s1="";
+         string s2="";
+         string s3="";
+        
+         while(i<n/3){
+             s1.push_back(s[i]);
+             i++;
+         }
+         while(i<2*n/3){
+             s2.push_back(s[i]);
+             i++;
+         }
+         reverse(s2.begin(),s2.end());
+         while(i<3*n/3){
+s3.push_back(s[i]);
+         i++;}
+         if(check(s1,s2,s3)==true){
+             cout<<"YES"<<endl;
+         }
+         else{
+             cout<<"NO"<<endl;
+         }
+     }
+     
+    }
+    return 0;
+}
